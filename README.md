@@ -31,14 +31,46 @@ This program is located in [space_is_the_place/main.c](space_is_the_place/main.c
 Our programs benefit from access to some shared system resources that make fast execution possible. We'll learn more about how one shared resource
 (the `cache`) works, and look at a brief example why it's important and how concepts like `temporality` and `locality` work.
 
-### `matrix_mania`
+### Labs: `matrix_mania` and the `bad_blink`
 
-This program is located in [matrix_mania/main.c](matrix_mania/main.c).
+Complete the programs in:
 
-Taking our previous examples further, we look at `2D` arrays in `C` (a `matrix`) to learn more about ideas of `temporality` and `locality` and draw
-conclusions from what we've learned about memory access.
+* [matrix_mania/main.c](matrix_mania/main.c)
+* [bad_blink/main.c](bad_blink/main.c)
+
+and use them to answer the questions in [docs/report.md](docs/report.md). Steps for each are included below.
+
+#### `matrix_mania`
+
+A step-up from traditional arrays, `matrix_mania` engages in _two-dimensional array_s. We're escaping our one-dimensional world and stepping into `row-major` and `column-major` territory. There are two functions that average a randomly-generated matrix. They do the same thing, essentially, but in very slightly different -- but consequential -- ways. Your goal(s):
+
+* time each function
+* determine the basic cache hit and miss rates for these functions, and
+* add them to the table in [docs/report.md](docs/report.md)
+
+#### `bad_blink`
+
+As the saying goes, there's something wrong in the state of moonrock. One of our devices appears a little broken. Can you tell us what's wrong?
+
+* Run the program contained in the `bad_blink` folder; it seems that something is a little slow -- what is it?
+* Review the code and respond to the relevant questions in [docs/report.md](docs/report.md)
+* After reviewing the code and writing a bit, how would you fix it?
+
+### Assignment "Hacks"
+
+See the `Suggestions` below to challenge yourself to implement a Hack. As always, you are allowed to develop
+your own Hack to satisfy this stretch goal. Place the code for the Hack inline with the code in the corresponding
+file.
+
+In order to recieve credit for the Hack, you must fill out the [hack.md](docs/hack.md) file located in the
+`docs` folder.
+
+#### Space might be the place, but could it be better?
+
+Our `space_is_the_place` `sum_array` function is pretty standard. But what do we notice about the `numbers` array? Could we possibly rewrite some portion of to make it perform _just a little better_?
 
 ### Changes to files in `.vscode`
+
 
 Based on your system setup (refer to your `hello-blinky` assignment), you will need switch out the `.vscode` folder in each exercise with the _last working copy_.
 

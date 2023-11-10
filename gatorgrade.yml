@@ -46,27 +46,3 @@
         fragment: 'net_time('
         count: 1
         exact: true
-- matrix_mania/main.c:
-    - description: matrix_mania/main.c contains no TODOs
-      category: TODO
-      check: MatchFileFragment
-      options:
-        fragment: 'TODO'
-        count: 0
-        exact: true
-- matrix_mania/main.c:
-    - description: matrix_mania/main.c implements gettimeofday to record code start and end time of each section of interest
-      category: Timing
-      check: MatchFileFragment
-      options:
-        fragment: 'gettimeofday'
-        count: 4
-        exact: true
-- matrix_mania/main.c:
-    - description: matrix_mania/main.c implements net_time to calculate runtime of code section 
-      category: Timing
-      check: MatchFileFragment
-      options:
-        fragment: 'net_time('
-        count: 2
-        exact: true
