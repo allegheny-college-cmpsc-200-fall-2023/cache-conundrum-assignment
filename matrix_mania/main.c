@@ -65,6 +65,7 @@ int main(int argc, char **argv) {
     // TODO: Set up ending time
     // TODO: Calculate cache miss and hit counts
     // TODO: Calculate cache hit and miss rates
+    // TODO: Calculate net_time, store as timer
     printf("v1 average is: %.2f; time is %g\n", res, timer);
 
     reset_cache();
@@ -73,9 +74,9 @@ int main(int argc, char **argv) {
     //TODO: Set up beginning time
     res = averageMat_v2(matrix, n);
     // TODO: Set up ending time
-    timer = net_time(tstart, tend);
     // TODO: Calculate cache miss and hit counts
     // TODO: Calculate cache hit and miss rates
+    // TODO: Calculate net_time, store as timer
     printf("v2 average is: %.2f; time is %g\n", res, timer);
 
     // Free memory used by matrix generation
