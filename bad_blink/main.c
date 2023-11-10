@@ -48,13 +48,13 @@ int main(void) {
 
 
 void long_delay(void) {
-    // TODO: Implement cache hit, miss calculation
-    // TODO: Calculate hit, miss rate
     int a;
     // TODO: Create a starting time
     for(int i = 0; i < 10000000U; i++){
         a = i;
     }
     // TODO: Calculate an ending time
+    // TODO: Implement cache hit, miss calculation
+    // TODO: Calculate hit, miss rate
     // TODO: Print the net time taken to run functionality
 }

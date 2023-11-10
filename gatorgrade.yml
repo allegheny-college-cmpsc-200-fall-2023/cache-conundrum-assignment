@@ -7,6 +7,14 @@
         count: 2
         exact: true
 - hello_cache/main.c:
+    - description: hello_cache/main.c implements net_time calcuation
+      category: Timing
+      check: MatchFileFragment
+      options:
+        fragment: 'net_time('
+        count: 1
+        exact: true
+- hello_cache/main.c:
     - description: hello_cache/main.c contains no TODOs
       category: TODO
       check: MatchFileFragment
@@ -14,6 +22,38 @@
         fragment: 'TODO'
         count: 0
         exact: true
+- hello_cache/main.c:
+    - description: hello_cache/main.c implements cache hit count calculation
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_hits_rate_nocache()'
+        count: 1
+        exact: false
+- hello_cache/main.c:
+    - description: hello_cache/main.c implements cache miss count calculation
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_missesrate_nocache()'
+        count: 1
+        exact: false
+- hello_cache/main.c:
+    - description: hello_cache/main.c implements cache hit rate calculation
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_hit_rate_nocache()'
+        count: 1
+        exact: false
+- hello_cache/main.c:
+    - description: hello_cache/main.c implements cache miss rate calculation
+      category: Cache rates
+      check: MatchFileRegex
+      options:
+        regex: '100(\s)?-(\s)?get_cache_hit_rate_nocache()'
+        count: 1
+        exact: false
 - hello_cache/main.c:
     - description: hello_cache/main.c implements net_time to calculate runtime of code section
       category: Timing
@@ -39,10 +79,170 @@
         count: 2
         exact: true
 - space_is_the_place/main.c:
-    - description: space_is_the_place/main.c implements net_time to calculate runtime of code section 
+    - description: space_is_the_place/main.c implements net_time to calculate runtime of code sections 
+      category: Timing
+      check: MatchFileFragment
+      options:
+        fragment: 'net_time('
+        count: 2
+        exact: true
+- space_is_the_place/main.c:
+    - description: space_is_the_place/main.c implements cache hit count calculation
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_hits_rate_nocache()'
+        count: 2
+        exact: false
+- space_is_the_place/main.c:
+    - description: space_is_the_place/main.c implements cache miss count calculation
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_missesrate_nocache()'
+        count: 2
+        exact: false
+- space_is_the_place/main.c:
+    - description: space_is_the_place/main.c implements cache hit rate calculation
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_hit_rate_nocache()'
+        count: 2
+        exact: false
+- space_is_the_place/main.c:
+    - description: space_is_the_place/main.c implements cache miss rate calculation
+      category: Cache rates
+      check: MatchFileRegex
+      options:
+        regex: '100(\s)?-(\s)?get_cache_hit_rate_nocache()'
+        count: 2
+        exact: false
+- space_is_the_place/main.c:
+    - description: space_is_the_place/main.c implements net_time to calculate runtime of code section
       category: Timing
       check: MatchFileFragment
       options:
         fragment: 'net_time('
         count: 1
+        exact: true
+- space_is_the_place/main.c:
+    - description: space_is_the_place/main.c uses the sum_array_nocache function to run uncached operations
+      category: Timing
+      check: MatchFileFragment
+      options:
+        fragment: 'sum_array_nocache('
+        count: 1
+        exact: true
+- matrix_mania/main.c:
+    - description: matrix_mania/main.c contains no TODOs
+      category: TODO
+      check: MatchFileFragment
+      options:
+        fragment: 'TODO'
+        count: 0
+        exact: true
+- matrix_mania/main.c:
+    - description: matrix_mania/main.c implements gettimeofday to record code start and end time of each section of interest
+      category: Timing
+      check: MatchFileFragment
+      options:
+        fragment: 'gettimeofday'
+        count: 4
+        exact: true
+- matrix_mania/main.c:
+    - description: matrix_mania/main.c implements net_time to calculate runtime of code sections
+      category: Timing
+      check: MatchFileFragment
+      options:
+        fragment: 'net_time('
+        count: 2
+        exact: true
+- matrix_mania/main.c:
+    - description: matrix_mania/main.c implements cache hit count calculation for both functions
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_hits_rate_nocache()'
+        count: 2
+        exact: false
+- matrix_mania/main.c:
+    - description: matrix_mania/main.c implements cache miss count calculation for both functions
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_missesrate_nocache()'
+        count: 2
+        exact: false
+- matrix_mania/main.c:
+    - description: matrix_mania/main.c implements cache hit rate calculation for both functions
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_hit_rate_nocache()'
+        count: 2
+        exact: false
+- matrix_mania/main.c:
+    - description: matrix_mania/main.c implements cache miss rate calculation for both functions
+      category: Cache rates
+      check: MatchFileRegex
+      options:
+        regex: '100(\s)?-(\s)?get_cache_hit_rate_nocache()'
+        count: 2
+        exact: false
+- matrix_mania/main.c:
+    - description: matrix_mania/main.c implements net_time to calculate runtime of code sections
+      category: Timing
+      check: MatchFileFragment
+      options:
+        fragment: 'net_time('
+        count: 1
+        exact: true
+- bad_blink/main.c:
+    - description: bad_blink/main.c implements cache hit count calculation
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_hits_rate_nocache()'
+        count: 1
+        exact: false
+- bad_blink/main.c:
+    - description: bad_blink/main.c implements cache miss count calculation
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_missesrate_nocache()'
+        count: 1
+        exact: false
+- bad_blink/main.c:
+    - description: bad_blink/main.c implements cache hit rate calculation
+      category: Cache rates
+      check: MatchFileFragment
+      options:
+        fragment: 'get_cache_hit_rate_nocache()'
+        count: 1
+        exact: false
+- bad_blink/main.c:
+    - description: bad_blink/main.c implements cache miss rate calculation
+      category: Cache rates
+      check: MatchFileRegex
+      options:
+        regex: '100(\s)?-(\s)?get_cache_hit_rate_nocache()'
+        count: 1
+        exact: false
+- bad_blink/main.c:
+    - description: bad_blink/main.c implements net_time to calculate runtime of code section
+      category: Timing
+      check: MatchFileFragment
+      options:
+        fragment: 'net_time('
+        count: 1
+        exact: true
+- docs/report.md:
+    - description: docs/report.md responds to all questions
+      category: TODOs
+      check: MatchFileFragment
+      options:
+        fragment: 'TODO'
+        count: 0
         exact: true
