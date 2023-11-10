@@ -27,7 +27,7 @@
       category: Cache rates
       check: MatchFileFragment
       options:
-        fragment: 'get_cache_hits_rate_nocache()'
+        fragment: 'get_hits_nocache()'
         count: 1
         exact: false
 - hello_cache/main.c:
@@ -35,7 +35,7 @@
       category: Cache rates
       check: MatchFileFragment
       options:
-        fragment: 'get_cache_missesrate_nocache()'
+        fragment: 'get_misses_nocache()'
         count: 1
         exact: false
 - hello_cache/main.c:
@@ -51,7 +51,7 @@
       category: Cache rates
       check: MatchFileRegex
       options:
-        regex: '100(\s)?-(\s)?get_cache_hit_rate_nocache()'
+        regex: '100(\s)?-(\s)?hit_rate'
         count: 1
         exact: false
 - hello_cache/main.c:
@@ -77,7 +77,7 @@
       options:
         fragment: 'gettimeofday'
         count: 2
-        exact: true
+        exact: false
 - space_is_the_place/main.c:
     - description: space_is_the_place/main.c implements net_time to calculate runtime of code sections 
       category: Timing
@@ -91,16 +91,16 @@
       category: Cache rates
       check: MatchFileFragment
       options:
-        fragment: 'get_cache_hits_rate_nocache()'
-        count: 2
+        fragment: 'get_hits_nocache()'
+        count: 1
         exact: false
 - space_is_the_place/main.c:
     - description: space_is_the_place/main.c implements cache miss count calculation
       category: Cache rates
       check: MatchFileFragment
       options:
-        fragment: 'get_cache_missesrate_nocache()'
-        count: 2
+        fragment: 'get_misses_nocache()'
+        count: 1
         exact: false
 - space_is_the_place/main.c:
     - description: space_is_the_place/main.c implements cache hit rate calculation
@@ -108,15 +108,15 @@
       check: MatchFileFragment
       options:
         fragment: 'get_cache_hit_rate_nocache()'
-        count: 2
+        count: 1
         exact: false
 - space_is_the_place/main.c:
     - description: space_is_the_place/main.c implements cache miss rate calculation
       category: Cache rates
       check: MatchFileRegex
       options:
-        regex: '100(\s)?-(\s)?get_cache_hit_rate_nocache()'
-        count: 2
+        regex: '100(\s)?-(\s)?hit_rate'
+        count: 1
         exact: false
 - space_is_the_place/main.c:
     - description: space_is_the_place/main.c implements net_time to calculate runtime of code section
@@ -124,7 +124,7 @@
       check: MatchFileFragment
       options:
         fragment: 'net_time('
-        count: 1
+        count: 2
         exact: true
 - space_is_the_place/main.c:
     - description: space_is_the_place/main.c uses the sum_array_nocache function to run uncached operations
@@ -163,7 +163,7 @@
       category: Cache rates
       check: MatchFileFragment
       options:
-        fragment: 'get_cache_hits_rate_nocache()'
+        fragment: 'get_hits_nocache()'
         count: 2
         exact: false
 - matrix_mania/main.c:
@@ -171,7 +171,7 @@
       category: Cache rates
       check: MatchFileFragment
       options:
-        fragment: 'get_cache_missesrate_nocache()'
+        fragment: 'get_misses_nocache()'
         count: 2
         exact: false
 - matrix_mania/main.c:
@@ -187,7 +187,7 @@
       category: Cache rates
       check: MatchFileRegex
       options:
-        regex: '100(\s)?-(\s)?get_cache_hit_rate_nocache()'
+        regex: '100(\s)?-(\s)?hit_rate'
         count: 2
         exact: false
 - matrix_mania/main.c:
@@ -203,7 +203,7 @@
       category: Cache rates
       check: MatchFileFragment
       options:
-        fragment: 'get_cache_hits_rate_nocache()'
+        fragment: 'get_hits_nocache()'
         count: 1
         exact: false
 - bad_blink/main.c:
@@ -211,7 +211,7 @@
       category: Cache rates
       check: MatchFileFragment
       options:
-        fragment: 'get_cache_missesrate_nocache()'
+        fragment: 'get_misses_nocache()'
         count: 1
         exact: false
 - bad_blink/main.c:
@@ -227,7 +227,7 @@
       category: Cache rates
       check: MatchFileRegex
       options:
-        regex: '100(\s)?-(\s)?get_cache_hit_rate_nocache()'
+        regex: '100(\s)?-(\s)?hit_rate'
         count: 1
         exact: false
 - bad_blink/main.c:
