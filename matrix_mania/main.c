@@ -53,27 +53,30 @@ int main(int argc, char **argv) {
 
     int i;
     float res;
-    double timer;
+    float timer;
     int n = 100;
     srand(time(NULL));
     struct timeval tstart, tend;
     int ** matrix = genRandomMatrix(n, 100);
 
-    // Version 1, in-cache
-    gettimeofday(&tstart, NULL);
+    // Version 1
+    // TODO: Set up beginning time
     res = averageMat_v1(matrix, n);
-    gettimeofday(&tend, NULL);
-    timer = net_time(tstart, tend);
+    // TODO: Set up ending time
     printf("v1 average is: %.2f; time is %g\n", res, timer);
+    // TODO: Calculate cache miss and hit counts
+    // TODO: Calculate cache hit and miss rates
 
     reset_cache();
 
-    // Version 2, in-cache 
-    gettimeofday(&tstart, NULL);
+    // Version 2
+    //TODO: Set up beginning time
     res = averageMat_v2(matrix, n);
-    gettimeofday(&tend, NULL);
+    // TODO: Set up ending time
     timer = net_time(tstart, tend);
     printf("v2 average is: %.2f; time is %g\n", res, timer);
+    // TODO: Calculate cache miss and hit counts
+    // TODO: Calculate cache hit and miss rates
 
     // Free memory used by matrix generation
     free_all(matrix, n);

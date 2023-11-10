@@ -40,6 +40,17 @@ Complete the programs in:
 
 and use them to answer the questions in [docs/report.md](docs/report.md). Steps for each are included below.
 
+#### `bad_blink`
+
+As the saying goes, there's something wrong in the state of moonrock. One of our devices appears a little broken. Can you tell us what's wrong?
+
+* Run the program contained in the `bad_blink` folder; it seems that something is a little slow -- what is it?
+* Review the code and respond to the relevant questions in [docs/report.md](docs/report.md)
+* After reviewing the code and writing a bit, how would you fix it?
+
+> Hint: here, we're thinking largely about _temporality_; if we're not caching the entire sequence of instructions/data in the `for` loop, how
+> might that affect a program's ability to function efficiently?
+
 #### `matrix_mania`
 
 A step-up from traditional arrays, `matrix_mania` engages in _two-dimensional array_s. We're escaping our one-dimensional world and stepping into `row-major` and `column-major` territory. There are two functions that average a randomly-generated matrix. They do the same thing, essentially, but in very slightly different -- but consequential -- ways. Your goal(s):
@@ -48,13 +59,9 @@ A step-up from traditional arrays, `matrix_mania` engages in _two-dimensional ar
 * determine the basic cache hit and miss rates for these functions, and
 * add them to the table in [docs/report.md](docs/report.md)
 
-#### `bad_blink`
+From this example, you should be able to draw some conclusions about why one function is much more efficient and _faster_ than the other.
 
-As the saying goes, there's something wrong in the state of moonrock. One of our devices appears a little broken. Can you tell us what's wrong?
-
-* Run the program contained in the `bad_blink` folder; it seems that something is a little slow -- what is it?
-* Review the code and respond to the relevant questions in [docs/report.md](docs/report.md)
-* After reviewing the code and writing a bit, how would you fix it?
+> Hint: this has to do with data _locality_; is it possible that some of the data is harder to group due to proximity from each other?
 
 ### Assignment "Hacks"
 
@@ -69,8 +76,19 @@ In order to recieve credit for the Hack, you must fill out the [hack.md](docs/ha
 
 Our `space_is_the_place` `sum_array` function is pretty standard. But what do we notice about the `numbers` array? Could we possibly rewrite some portion of to make it perform _just a little better_?
 
-### Changes to files in `.vscode`
+> Hint: Here, we might think about _data types_; is there a better or worse data type for our `numbers` array?
 
+#### `matrix_mania`
+
+* Use `averageMat_v1` for this hack.
+
+First, let's figure out the maximum amount of elements we think we can fit in our matrix. Calculate this for the `heap` size that's free at the beginning 
+of program execution. `getTotalHeap` and `getFreeHeap` are both available to you.
+
+There _is_ a benefit to _not_ caching our information -- we gain _space_. For example, you might figure out how many more rows and columns we can add to our
+matrix. Write a `func_ptr_t` for `averageMat_v1` to place it _out of cacheable range_. Do we _gain_ space? If so, how much? Recall that our cache is `16K`.
+
+### Changes to files in `.vscode`
 
 Based on your system setup (refer to your `hello-blinky` assignment), you will need switch out the `.vscode` folder in each exercise with the _last working copy_.
 
