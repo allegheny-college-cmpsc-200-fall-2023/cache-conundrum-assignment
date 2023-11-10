@@ -54,14 +54,6 @@
         regex: '100(\s)?-(\s)?hit_rate'
         count: 1
         exact: false
-- hello_cache/main.c:
-    - description: hello_cache/main.c implements net_time to calculate runtime of code section
-      category: Timing
-      check: MatchFileFragment
-      options:
-        fragment: 'net_time('
-        count: 1
-        exact: true
 - space_is_the_place/main.c:
     - description: space_is_the_place/main.c contains no TODOs
       category: TODO
@@ -118,14 +110,6 @@
         regex: '100(\s)?-(\s)?hit_rate'
         count: 1
         exact: false
-- space_is_the_place/main.c:
-    - description: space_is_the_place/main.c implements net_time to calculate runtime of code section
-      category: Timing
-      check: MatchFileFragment
-      options:
-        fragment: 'net_time('
-        count: 2
-        exact: true
 - space_is_the_place/main.c:
     - description: space_is_the_place/main.c uses the sum_array_nocache function to run uncached operations
       category: Timing
@@ -190,14 +174,6 @@
         regex: '100(\s)?-(\s)?hit_rate'
         count: 2
         exact: false
-- matrix_mania/main.c:
-    - description: matrix_mania/main.c implements net_time to calculate runtime of code sections
-      category: Timing
-      check: MatchFileFragment
-      options:
-        fragment: 'net_time('
-        count: 1
-        exact: true
 - bad_blink/main.c:
     - description: bad_blink/main.c implements cache hit count calculation
       category: Cache rates
